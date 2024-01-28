@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 /**
+ * ENDPOINTS API
+ */
+const kBaseUri = "http://10.0.2.2:5001";
+/**
  * TEXT STYLE
  */
 const kHeadingTextStyle = TextStyle(
