@@ -30,7 +30,7 @@ const kButtonTextStyle = TextStyle(
 
 const kNormalTextStyle = TextStyle(
   fontFamily: "Inter",
-  fontSize: 10,
+  fontSize: 12,
   color: kBlack
 );
 

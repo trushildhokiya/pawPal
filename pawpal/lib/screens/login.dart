@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:pawpal/utils/constants.dart';
 
@@ -70,6 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: Text("Login",style: kNormalTextStyle.copyWith(fontSize: 13),),
                           onPressed: (){
                             //TODO: Implement call to Api
+                            context.pushReplacement('/home');
                           },
                           style: ButtonStyle(
                               elevation: MaterialStateProperty.all(6.0),

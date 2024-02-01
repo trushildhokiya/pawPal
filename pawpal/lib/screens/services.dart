@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class ServicesPage extends StatelessWidget {
+  const ServicesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Text("Home Page"),
+          child: Text("Services Page"),
         ),
       ),
     );

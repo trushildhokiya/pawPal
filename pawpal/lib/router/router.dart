@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:pawpal/screens/home_skeleton.dart';
 import 'package:pawpal/screens/login.dart';
 import 'package:pawpal/screens/register.dart';
 import 'package:pawpal/screens/splash.dart';
@@ -21,7 +22,11 @@ class MyRouter {
     GoRoute(
         name: "login",
         path: '/auth/login',
-        builder: (context, state) => LoginPage())
+        builder: (context, state) => LoginPage()),
+    GoRoute(
+        name: "home",
+        path: '/home',
+        builder: (context, state) => HomeSkeletonPage())
   ]);
 
   GoRouter getRouter() => _router;
