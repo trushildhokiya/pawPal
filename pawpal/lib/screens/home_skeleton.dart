@@ -60,12 +60,14 @@ class _HomeSkeletonPageState extends State<HomeSkeletonPage> {
           // store
 
           SalomonBottomBarItem(
-              icon: Icon(LucideIcons.store),
-              title: Text(
-                "Store",
-                style: kButtonTextStyle.copyWith(
-                    fontWeight: FontWeight.w600, color: kBrown),
-              )),
+            icon: Icon(LucideIcons.store),
+            title: Text(
+              "Store",
+              style: kButtonTextStyle.copyWith(
+                  fontWeight: FontWeight.w600, color: kBrown),
+            ),
+            selectedColor: kYellowGold,
+          ),
 
           // Search
           SalomonBottomBarItem(

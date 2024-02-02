@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: Text("Login",style: kNormalTextStyle.copyWith(fontSize: 13),),
                           onPressed: (){
                             //TODO: Implement call to Api
-                            context.pushReplacement('/home');
+                            context.go('/home');
                           },
                           style: ButtonStyle(
                               elevation: MaterialStateProperty.all(6.0),

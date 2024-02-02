@@ -50,7 +50,7 @@ class _StartPageState extends State<StartPage> {
                       EdgeInsets.symmetric(vertical: 5, horizontal: 30))),
               child: Text(
                 "Login",
-                style: kButtonTextStyle,
+                style: kButtonTextStyle.copyWith(fontSize: 13),
               ),
               onPressed: () {
                 context.push('/auth/login');
