@@ -3,6 +3,7 @@ import 'package:pawpal/screens/home_skeleton.dart';
 import 'package:pawpal/screens/login.dart';
 import 'package:pawpal/screens/profile.dart';
 import 'package:pawpal/screens/register.dart';
+import 'package:pawpal/screens/settings.dart';
 import 'package:pawpal/screens/splash.dart';
 import 'package:pawpal/screens/start.dart';
 
@@ -31,7 +32,12 @@ class MyRouter {
     GoRoute(
         name: "profile",
         path: '/profile',
-        builder: (context, state) => ProfilePage())
+        builder: (context, state) => ProfilePage()),
+    GoRoute(
+      name: "settings",
+      path: "/settings",
+      builder: (context, state) => SettingsPage(),
+    )
   ]);
 
   GoRouter getRouter() => _router;

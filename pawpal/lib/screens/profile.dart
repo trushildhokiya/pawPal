@@ -12,8 +12,7 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: RefreshIndicator(
-          onRefresh: () async{
-          },
+          onRefresh: () async {},
           child: Column(
             children: [
               Container(
@@ -66,7 +65,8 @@ class ProfilePage extends StatelessWidget {
                                 Text(
                                   "34",
                                   style: kNormalTextStyle.copyWith(
-                                      fontSize: 14, fontWeight: FontWeight.w600),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600),
                                 ),
                                 Text(
                                   "Posts",
@@ -80,7 +80,8 @@ class ProfilePage extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 20, horizontal: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -105,13 +106,19 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     Text(
                       "My Posts",
-                      style:
-                          kNormalTextStyle.copyWith(fontSize:16,fontWeight: FontWeight.w600),
+                      style: kNormalTextStyle.copyWith(
+                          fontSize: 16, fontWeight: FontWeight.w600),
                     ),
-                    Icon(
-                      LucideIcons.settings,
-                      size: 20,
-                    )
+                    IconButton(
+                      onPressed: () {
+                        context.push('/settings');
+                      },
+                      color: Colors.black,
+                      icon: Icon(
+                        LucideIcons.settings,
+                        size: 20,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -130,12 +137,11 @@ class ProfilePage extends StatelessWidget {
                     children: List.generate(34, (index) {
                       return Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(2),
-                          image: DecorationImage(
-                            image: NetworkImage("https://picsum.photos/${400+index}"),
-                            fit: BoxFit.cover
-                          )
-                        ),
+                            borderRadius: BorderRadius.circular(2),
+                            image: DecorationImage(
+                                image: NetworkImage(
+                                    "https://picsum.photos/${400 + index}"),
+                                fit: BoxFit.cover)),
                       );
                     }),
                   ),

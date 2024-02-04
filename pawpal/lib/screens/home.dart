@@ -102,10 +102,18 @@ class _HomePageState extends State<HomePage> {
 
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-                child: Text(
-                  'Posts',
-                  style: kNormalTextStyle.copyWith(
-                      fontSize: 13, fontWeight: FontWeight.w600),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0,0,10,0),
+                      child: Icon(LucideIcons.image,size: 20,),
+                    ),
+                    Text(
+                      'Posts',
+                      style: kNormalTextStyle.copyWith(
+                          fontSize: 13, fontWeight: FontWeight.w600),
+                    ),
+                  ],
                 ),
               ),
 
@@ -126,10 +134,13 @@ class _HomePageState extends State<HomePage> {
                           margin:EdgeInsets.symmetric(vertical: 10),
                           child: Row(
                             children:[
-                              CircleAvatar(
-                                child: RandomAvatar('Trushil+$index',
-                                    trBackground: true, height: 55, width: 55),
-                                radius: 12,
+                              Container(
+                                margin: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                                child: CircleAvatar(
+                                  child: RandomAvatar('Trushil+$index',
+                                      trBackground: true, height: 55, width: 55),
+                                  radius: 12,
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -199,11 +210,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                   );
                 },
-              ),
+              )
+
             ],
           ),
         ),
       ),
+
     );
   }
 }

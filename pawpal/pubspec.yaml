@@ -44,6 +44,7 @@ dependencies:
   random_avatar: ^0.0.8
   flutter_carousel_widget: ^2.2.0
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
