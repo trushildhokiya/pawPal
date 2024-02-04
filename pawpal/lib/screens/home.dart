@@ -3,6 +3,7 @@ import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:pawpal/utils/constants.dart';
 import 'package:random_avatar/random_avatar.dart';
+import 'package:share_plus/share_plus.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key});
@@ -105,8 +106,11 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(0,0,10,0),
-                      child: Icon(LucideIcons.image,size: 20,),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                      child: Icon(
+                        LucideIcons.image,
+                        size: 20,
+                      ),
                     ),
                     Text(
                       'Posts',
@@ -131,26 +135,24 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: [
                         Container(
-                          margin:EdgeInsets.symmetric(vertical: 10),
-                          child: Row(
-                            children:[
-                              Container(
-                                margin: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                                child: CircleAvatar(
-                                  child: RandomAvatar('Trushil+$index',
-                                      trBackground: true, height: 55, width: 55),
-                                  radius: 12,
-                                ),
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(children: [
+                            Container(
+                              margin: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                              child: CircleAvatar(
+                                child: RandomAvatar('Trushil+$index',
+                                    trBackground: true, height: 55, width: 55),
+                                radius: 12,
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "PetLover$index",
-                                  style: kNormalTextStyle.copyWith(fontSize: 10),
-                                ),
-                              )
-                            ]
-                          ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "PetLover$index",
+                                style: kNormalTextStyle.copyWith(fontSize: 10),
+                              ),
+                            )
+                          ]),
                         ),
                         Container(
                           height: 300,
@@ -170,35 +172,45 @@ class _HomePageState extends State<HomePage> {
                           margin: EdgeInsets.fromLTRB(0, 5, 0, 15),
                           child: Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Icon(
-                                  LucideIcons.heart,
-                                  color: Colors.red,
-                                  size: 20,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Icon(
-                                  LucideIcons.messageCircle,
-                                  size: 20,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Icon(
-                                  LucideIcons.send,
-                                  size: 20,
-                                ),
-                              ),
+                              Container(
+                                  margin: EdgeInsets.symmetric(horizontal: 5),
+                                  height: 25.0,
+                                  width: 25.0,
+                                  child: IconButton(
+                                      padding: EdgeInsets.all(0.0),
+                                      icon: Icon(LucideIcons.heart, size: 18.0),
+                                      onPressed: () {})),
+                              Container(
+                                  margin: EdgeInsets.symmetric(horizontal: 5),
+                                  height: 25.0,
+                                  width: 25.0,
+                                  child: IconButton(
+                                      padding: EdgeInsets.all(0.0),
+                                      icon: Icon(LucideIcons.messageCircle,
+                                          size: 18.0),
+                                      onPressed: () {})),
+                              Container(
+                                  margin: EdgeInsets.symmetric(horizontal: 5),
+                                  height: 25.0,
+                                  width: 25.0,
+                                  child: IconButton(
+                                      padding: EdgeInsets.all(0.0),
+                                      icon: Icon(LucideIcons.send, size: 18.0),
+                                      onPressed: ()  {
+                                        final uriImage = data[index]['imageUrl']!;
+                                        Share.share('Post image i found on Pawpal $uriImage',subject: "PawPal post");
+                                      })),
                               Expanded(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: Text("December 2023",style: kNormalTextStyle.copyWith(fontSize: 10),),
+                                      child: Text(
+                                        "December 2023",
+                                        style: kNormalTextStyle.copyWith(
+                                            fontSize: 10),
+                                      ),
                                     )
                                   ],
                                 ),
@@ -211,12 +223,10 @@ class _HomePageState extends State<HomePage> {
                   );
                 },
               )
-
             ],
           ),
         ),
       ),
-
     );
   }
 }

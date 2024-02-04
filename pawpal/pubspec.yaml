@@ -43,6 +43,7 @@ dependencies:
   salomon_bottom_bar: ^3.3.2
   random_avatar: ^0.0.8
   flutter_carousel_widget: ^2.2.0
+  share_plus: ^7.2.2
 
 
 dev_dependencies:
