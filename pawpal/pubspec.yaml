@@ -44,6 +44,8 @@ dependencies:
   random_avatar: ^0.0.8
   flutter_carousel_widget: ^2.2.0
   share_plus: ^7.2.2
+  image_picker: ^1.0.7
+  flutter_expandable_fab: ^2.0.0
 
 
 dev_dependencies:

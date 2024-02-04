@@ -174,16 +174,16 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Container(
                                   margin: EdgeInsets.symmetric(horizontal: 5),
-                                  height: 25.0,
-                                  width: 25.0,
+                                  height: 30.0,
+                                  width: 30.0,
                                   child: IconButton(
                                       padding: EdgeInsets.all(0.0),
                                       icon: Icon(LucideIcons.heart, size: 18.0),
                                       onPressed: () {})),
                               Container(
                                   margin: EdgeInsets.symmetric(horizontal: 5),
-                                  height: 25.0,
-                                  width: 25.0,
+                                  height: 30.0,
+                                  width: 30.0,
                                   child: IconButton(
                                       padding: EdgeInsets.all(0.0),
                                       icon: Icon(LucideIcons.messageCircle,
@@ -191,8 +191,8 @@ class _HomePageState extends State<HomePage> {
                                       onPressed: () {})),
                               Container(
                                   margin: EdgeInsets.symmetric(horizontal: 5),
-                                  height: 25.0,
-                                  width: 25.0,
+                                  height: 30.0,
+                                  width: 30.0,
                                   child: IconButton(
                                       padding: EdgeInsets.all(0.0),
                                       icon: Icon(LucideIcons.send, size: 18.0),

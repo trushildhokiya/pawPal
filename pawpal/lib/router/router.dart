@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:pawpal/screens/home_skeleton.dart';
 import 'package:pawpal/screens/login.dart';
+import 'package:pawpal/screens/post.dart';
 import 'package:pawpal/screens/profile.dart';
 import 'package:pawpal/screens/register.dart';
 import 'package:pawpal/screens/settings.dart';
@@ -37,6 +38,11 @@ class MyRouter {
       name: "settings",
       path: "/settings",
       builder: (context, state) => SettingsPage(),
+    ),
+    GoRoute(
+      name: "post",
+      path: "/post",
+      builder: (context, state) => PostPage(),
     )
   ]);
 

@@ -45,5 +45,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The App requires the permission to load images from your gallery for posts</string>
+	<key>NSCameraUsageDescription</key>
+	<string>The App requires the permission to open camera for taking pictures in app</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>The App requires the permission to use microphone to record audio for video posts</string>
 </dict>
 </plist>
