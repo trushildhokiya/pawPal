@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:pawpal/utils/constants.dart';
+import 'package:random_avatar/random_avatar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key});
@@ -122,6 +123,25 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: [
                         Container(
+                          margin:EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            children:[
+                              CircleAvatar(
+                                child: RandomAvatar('Trushil+$index',
+                                    trBackground: true, height: 55, width: 55),
+                                radius: 12,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "PetLover$index",
+                                  style: kNormalTextStyle.copyWith(fontSize: 10),
+                                ),
+                              )
+                            ]
+                          ),
+                        ),
+                        Container(
                           height: 300,
                           child: Container(
                             decoration: BoxDecoration(
@@ -167,7 +187,7 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: Text("December 2023",style: kNormalTextStyle,),
+                                      child: Text("December 2023",style: kNormalTextStyle.copyWith(fontSize: 10),),
                                     )
                                   ],
                                 ),
